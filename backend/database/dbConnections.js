@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export function dbConnection() {
+export default function dbConnection() {
   mongoose
     .connect("mongodb://127.0.0.1:27017/socket")
     .then(() => {
