@@ -30,8 +30,20 @@ io.on("connection", (socket) => {
   socket.on("newMessage", data => {
     console.log(data)
     // socket.emit("replay", "thanks, well received!")
-    socket.emit("replay", data)
-
-  })
+    // socket.emit("replay", data) 
+     socket.broadcast.emit("replay", data)
+    // io.emit("replay", data)
+     // io.to().emit("replay", data)
+})
   
+socket.on("UserTyping", (data) => {
+  console.log('typing')
+  socket.broadcast.emit("typing", "typing")
+})
+
+socket.on("stopTyping", (data) => {
+  console.log('stopTyping')
+  socket.broadcast.emit("stopUserTyping", "")
+})
+
 });

@@ -11,19 +11,23 @@
   <body>
     <h1>Welcome sockets</h1>
 
-<div class="container">
+<div class="container" id="test">
   <div class="message_content"></div>
 </div>
 
 
 
     <div class="container fixed-bottom py-3">
+      <p id="typingMes" class="d-none">Typing...</p>
       <div class="d-flex">
         <input type="text" id="chatMsg" class="form-control" placeholder="please start chat" />
         <button onClick="sendMsg()" class="btn btn-info mx-2">Send</button>
       </div>
     </div>
 
+
+
+    
     <script
       src="https://cdn.socket.io/4.7.5/socket.io.min.js"
       integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
