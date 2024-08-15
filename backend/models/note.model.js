@@ -8,4 +8,4 @@ const noteSchema = new mongoose.Schema(
   {timestamps: true}
 );
 
-export const Note = mongoose.model("note", noteSchema);
+export const NoteModel = mongoose.model("note", noteSchema);
